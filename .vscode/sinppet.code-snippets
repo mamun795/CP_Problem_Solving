@@ -30,22 +30,6 @@
     "#define mod   1000000007",
     "#define Exp   1e18",
     "",
-    "ll gcd(ll m,ll n)",
-    "{",
-    "    ll l=max(m,n);",
-    "    ll k=min(m,n);",
-    "    ll r;",
-    "    while(k>0)",
-    "    {",
-    "        r=l%k;",
-    "        l=k;",
-    "        k=r;",
-    "    }",
-    "    return l;",
-    "}",
-    "",
-    "",
-    "",
     "void solve()",
     "{",
     "",
@@ -71,5 +55,30 @@
     ""
   ],
   "description": ""
+},
+
+
+"Greatest Commoun Divisor": {
+  "prefix": "gcd",
+  "body": [
+    "ll gcd(ll m,ll n)",
+    "{",
+    "    ll l=max(m,n);",
+    "    ll k=min(m,n);",
+    "    ll r;",
+    "    while(k>0)",
+    "    {",
+    "        r=l%k;",
+    "        l=k;",
+    "        k=r;",
+    "    }",
+    "    return l;",
+    "}",
+    "",
+    ""
+  ],
+  "description": ""
 }
+
+
 }
