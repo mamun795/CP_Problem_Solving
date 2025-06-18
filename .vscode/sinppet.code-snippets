@@ -22,7 +22,6 @@
   "prefix": "format",
   "body": [
     "#include<bits/stdc++.h>",
-    "#include<math.h>",
     "#define ll long long",
     "using namespace std;",
     "#define hmm cout<<\"YES\"<<endl",
