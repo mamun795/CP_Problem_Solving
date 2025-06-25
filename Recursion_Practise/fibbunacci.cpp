@@ -5,12 +5,13 @@ using namespace std;
 #define na cout<<"NO"<<endl
 
 
-ll fi(ll n){
+ll fi(ll n,vector<ll>&dp){
     if(n<=1){
         
         return n;
     }
-    return fi(n-1)+fi(n-2);
+    if(dp[n]!=-1) return dp[n];
+    return dp[n]=fi(n-1,dp)+fi(n-2,dp);
 }
 
 
@@ -18,7 +19,8 @@ ll fi(ll n){
 void solve()
 {
     ll n;cin>>n;
-    cout<<fi(n)<<endl;
+    vector<ll>dp(n+1,-1);
+    cout<<fi(n,dp)<<endl;
 }
 
 
