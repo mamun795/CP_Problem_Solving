@@ -1,4 +1,4 @@
 .cph/
 ./Recursion_Practise/.cph/
-*./exe
-*./txt
+*.exe
+*.txt
