@@ -6,11 +6,12 @@ using namespace std;
 
 void solve()
 {
-    ll a[]={0,1,2,3,4,5};
-    ll *p=a+1;
-    ll *b=p;
+    ll a=10;
+    ll *p=&a;
+    ll **b=&p;
+    **b=50;
     
-    cout<<b<<' '<<*b<<endl;
+    cout<<a<<' '<<**b<<endl;
 
 
 }
