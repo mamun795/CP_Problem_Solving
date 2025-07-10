@@ -6,15 +6,15 @@ using namespace std;
 
 
 
-void modify(ll *a){
-    *a=100;
-    cout<<*a<<endl;
+void modify(ll &p){
+    p=100;
+    cout<<&p<<endl;
 }
 
 void solve()
 {
     ll a=50;
-    modify(&a);
+    modify(a);
     cout<<a<<endl;
 
 
