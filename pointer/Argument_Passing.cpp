@@ -6,16 +6,15 @@ using namespace std;
 
 
 
-void modify(ll a){
-    a=100;
-    // it creates a copy of main function 'a';
-    // that's why it can't change
+void modify(ll *a){
+    *a=100;
+    cout<<*a<<endl;
 }
 
 void solve()
 {
     ll a=50;
-    modify(a);
+    modify(&a);
     cout<<a<<endl;
 
 
