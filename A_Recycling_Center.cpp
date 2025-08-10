@@ -12,18 +12,11 @@ void solve()
     vector<ll>v(n);
     for(int i=0;i<n;i++)cin>>v[i];
     sort(v.rbegin(),v.rend());
-    ll sum=0,a=1;
-    ll ans=INT_MAX;
+    ll saved=0;
     for(int i=0;i<n;i++){
-        sum=i,a=1;
-        for(int j=i;j<n;j++){
-            if(v[j]*a>k)sum++;
-            a*=2;
-        }
-        ans=min(ans,sum);
+        if(v[i]*(1LL<<saved)<=k)saved++;
     }
-    cout<<ans<<endl;
-
+    cout<<n-saved<<endl;
 
 }
 
