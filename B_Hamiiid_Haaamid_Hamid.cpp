@@ -9,20 +9,23 @@ ll dy[]={1,-1,0,0,1,-1,1,-1};
 void solve()
 {
     ll n,k;cin>>n>>k;
-    vector<ll>v(n);
-    for(int i=0;i<n;i++)cin>>v[i];
-    sort(v.rbegin(),v.rend());
-    ll sum=0,a=1;
-    ll ans=INT_MAX;
-    for(int i=0;i<n;i++){
-        sum=i,a=1;
-        for(int j=i;j<n;j++){
-            if(v[j]*a>k)sum++;
-            a*=2;
+    string s;cin>>s;
+    s="p"+s;
+    ll a=n,b=1;
+    for(int i=k+1;i<=n;i++){
+        if(s[i]=='#'){
+            a=i;
+            break;
         }
-        ans=min(ans,sum);
     }
-    cout<<ans<<endl;
+    for(int i=k-1;i>=1;i--){
+        if(s[i]=='#'){
+            b=i;
+            break;
+        }
+    }
+    ll ans=max(n-a+1,b-1+1);
+    cout<<ans+1<<endl;
 
 
 }

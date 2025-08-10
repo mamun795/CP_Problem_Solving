@@ -9,20 +9,22 @@ ll dy[]={1,-1,0,0,1,-1,1,-1};
 void solve()
 {
     ll n,k;cin>>n>>k;
-    vector<ll>v(n);
-    for(int i=0;i<n;i++)cin>>v[i];
-    sort(v.rbegin(),v.rend());
-    ll sum=0,a=1;
-    ll ans=INT_MAX;
-    for(int i=0;i<n;i++){
-        sum=i,a=1;
-        for(int j=i;j<n;j++){
-            if(v[j]*a>k)sum++;
-            a*=2;
-        }
-        ans=min(ans,sum);
+    ll a[3]={0};
+    ll sum=0;
+    for(int i=0;i<n;i++ ){
+        ll x;cin>>x;
+        sum+=x;
+        a[x]++;
     }
-    cout<<ans<<endl;
+
+    if(sum==k || k>sum+1){
+        cout<<-1<<endl;
+         return;
+    }
+    for(int i=0;i<a[0];i++)cout<<0<<' ';
+    for(int i=0;i<a[2];i++)cout<<2<<' ';
+    for(int i=0;i<a[1];i++)cout<<1<<' ';
+    cout<<endl;
 
 
 }
